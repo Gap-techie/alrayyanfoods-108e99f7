@@ -6,28 +6,28 @@ const productsData = [
     id: 1,
     name: "Classic Basmati",
     description: "Our traditional long-grain basmati, aged for 12 months to develop perfect aroma and texture.",
-    image: "/images/classic-basmati.jpg",
+    image: "/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
     features: ["Extra Long Grain", "Premium Quality", "12-Month Aged"]
   },
   {
     id: 2,
     name: "Royal Basmati",
     description: "Our flagship product, aged 24 months for unparalleled flavor and aroma, perfect for special occasions.",
-    image: "/images/royal-basmati.jpg",
+    image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
     features: ["24-Month Aged", "Signature Aroma", "Exceptional Length"]
   },
   {
     id: 3,
     name: "Brown Basmati",
     description: "Wholesome brown basmati rice with the bran layer intact, offering more fiber and nutrients.",
-    image: "/images/brown-basmati.jpg",
+    image: "/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
     features: ["Higher Fiber", "Nutrient-Rich", "Authentic Taste"]
   },
   {
     id: 4,
     name: "Sella Basmati",
     description: "Parboiled basmati that maintains its shape perfectly when cooked, ideal for biryanis and pilaus.",
-    image: "/images/sella-basmati.jpg",
+    image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
     features: ["Parboiled", "Non-Sticky", "Perfect for Biryani"]
   }
 ];
@@ -39,7 +39,7 @@ const ProductCard = ({ product }: { product: typeof productsData[0] }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-60 object-contain group-hover:scale-105 transition-transform duration-500"
         />
       </div>
       <h3 className="text-xl font-playfair font-bold text-al-green mb-2">{product.name}</h3>
