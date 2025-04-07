@@ -1,10 +1,17 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
       {/* Background Image with overlay */}
@@ -40,11 +47,13 @@ const Hero = () => {
             </Button>
             <Button 
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-al-green font-medium text-base px-6 py-6 h-auto transition-colors duration-300"
+              className="border-2 border-white text-white hover:bg-white hover:text-al-green font-medium text-base px-6 py-6 h-auto transition-colors duration-300 flex items-center gap-2"
               asChild
+              onClick={scrollToContact}
             >
               <Link to="#contact">
                 Get a Quote
+                <Mail className="h-5 w-5" />
               </Link>
             </Button>
           </div>

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -76,7 +76,7 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:block">
-          <button className="btn-secondary">Get a Quote</button>
+          <Link to="#contact" className="btn-secondary">Get a Quote</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -127,7 +127,13 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <button className="btn-secondary self-start">Get a Quote</button>
+            <Link 
+              to="#contact" 
+              className="btn-secondary self-start"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Get a Quote
+            </Link>
           </nav>
         </div>
       )}
