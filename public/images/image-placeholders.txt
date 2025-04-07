@@ -1,0 +1,13 @@
+
+The following images would be needed for the website:
+
+1. rice-field.jpg - A beautiful landscape of rice fields, preferably in Pakistan
+2. classic-basmati.jpg - Image of classic basmati rice grains or packaged product
+3. royal-basmati.jpg - Image of premium royal basmati rice
+4. brown-basmati.jpg - Image of brown basmati rice
+5. sella-basmati.jpg - Image of parboiled sella basmati rice
+6. rice-plantation.jpg - Image of traditional rice farming
+7. og-image.jpg - Featured image for social media sharing
+
+For now, we're using placeholder references in the code. In a production environment, 
+these would be replaced with actual optimized images.
