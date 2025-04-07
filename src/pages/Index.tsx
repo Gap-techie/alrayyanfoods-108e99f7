@@ -8,7 +8,6 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
-import { Helmet } from 'react-helmet';
 
 // Temporary image URLs until we have real images
 const PLACEHOLDER_IMAGES = {
@@ -45,12 +44,6 @@ const Index = () => {
   return (
     <>
       <SEO />
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
       
       <div className="min-h-screen flex flex-col">
         <Navbar />
