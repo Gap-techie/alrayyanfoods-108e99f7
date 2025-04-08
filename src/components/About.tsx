@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 
@@ -19,9 +18,11 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1 animate-fade-in">
-            <div className="arabic-border p-8 rounded-md">
+        {/* Flex container for equal height */}
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+          {/* Content Section */}
+          <div className="order-2 md:order-1 animate-fade-in flex flex-col justify-center">
+            <div className="arabic-border p-8 rounded-md h-full flex flex-col">
               <h3 className="text-2xl md:text-3xl font-playfair font-bold text-al-green mb-6 after:content-[''] after:block after:w-16 after:h-0.5 after:bg-al-gold after:mt-2">
                 Our Heritage
               </h3>
@@ -60,10 +61,11 @@ const About = () => {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 animate-fade-in-right">
-            <div className="about-image-container rounded-xl overflow-hidden shadow-2xl border-8 border-white">
+          {/* Image Section */}
+          <div className="order-1 md:order-2 animate-fade-in-right flex justify-center items-center">
+            <div className="about-image-container rounded-md overflow-hidden shadow-2xl border-8 border-white h-full flex">
               <img 
-                src="/public/lovable-uploads/34814bf5-17f6-4574-a795-5daab106d507.png" 
+                src="/public/lovable-uploads/new-image.png" 
                 alt="Traditional rice farming in Punjab, Pakistan" 
                 className="w-full h-full object-cover rounded-xl transition-transform hover:scale-105 duration-700"
               />
