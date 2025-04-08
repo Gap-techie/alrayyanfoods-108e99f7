@@ -1,12 +1,9 @@
-
 import React from "react";
 import { ChevronRight, Mail } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
-import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  const { t } = useTranslation();
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
       {/* Background pattern */}
@@ -19,10 +16,11 @@ const Hero = () => {
           <div className="max-w-xl">
             <div className="mb-8 animate-fade-in-right">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-al-green mb-6 font-playfair leading-tight">
-                {t('hero.title')}
+                Authentic Pakistani Basmati Rice
               </h1>
               <p className="text-lg md:text-xl text-gray-700 mb-8">
-                {t('hero.subtitle')}
+                Experience the finest quality, traditionally grown, aromatic long-grain
+                basmati rice from the fertile plains of Punjab, Pakistan.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* Explore Our Rice Button */}
@@ -33,7 +31,7 @@ const Hero = () => {
                   offset={-70}
                   className="bg-al-gold hover:bg-al-gold-light text-al-green-dark font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
                 >
-                  {t('hero.exploreButton')}
+                  Explore Our Rice
                   <ChevronRight className="h-5 w-5" />
                 </ScrollLink>
 
@@ -45,7 +43,7 @@ const Hero = () => {
                   offset={-70}
                   className="border-2 border-al-green text-al-green hover:bg-al-green hover:text-white font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
                 >
-                  {t('hero.quoteButton')}
+                  Get a Quote
                   <Mail className="h-5 w-5" />
                 </ScrollLink>
               </div>

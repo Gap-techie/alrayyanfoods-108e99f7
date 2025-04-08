@@ -1,13 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
 
 const WhatsAppChat: React.FC = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [hasBeenShown, setHasBeenShown] = useState(false);
   const phoneNumber = '966575649264'; // Without the + symbol for WhatsApp API
-  const { t, language } = useLanguage();
 
   // Show popup automatically after 5 seconds, but only once per session
   useEffect(() => {
@@ -27,29 +25,25 @@ const WhatsAppChat: React.FC = () => {
   }, [hasBeenShown]);
 
   const openWhatsApp = () => {
-    const greeting = language === 'ar' 
-      ? 'مرحباً الريان للأغذية، أنا مهتم بمنتجاتكم.' 
-      : 'Hello Al Rayyan Foods, I\'m interested in your products.';
-    
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(greeting)}`, '_blank');
+    window.open(`https://wa.me/${phoneNumber}?text=Hello%20Al%20Rayyan%20Foods%2C%20I%27m%20interested%20in%20your%20products.`, '_blank');
   };
 
   return (
-    <div className={`fixed ${language === 'ar' ? 'left-6' : 'right-6'} bottom-6 z-50`}>
+    <div className="fixed right-6 bottom-6 z-50">
       {/* WhatsApp Button - Positioned Below */}
       <div className="relative">
         {/* Popup Message - Positioned Above */}
         {isPopupVisible && (
-          <div className={`absolute bottom-16 ${language === 'ar' ? 'left-0' : 'right-0'} bg-white shadow-xl rounded-lg p-4 mb-2 max-w-[250px] animate-fade-in`}>
-            <div className={`absolute -bottom-2 ${language === 'ar' ? 'left-5' : 'right-5'} w-4 h-4 bg-white transform rotate-45`}></div>
+          <div className="absolute bottom-16 right-0 bg-white shadow-xl rounded-lg p-4 mb-2 max-w-[250px] animate-fade-in">
+            <div className="absolute -bottom-2 right-5 w-4 h-4 bg-white transform rotate-45"></div>
             <p className="text-gray-800 text-sm font-medium">
-              {t('whatsapp.message')}
+              Need help with our products? Chat with us on WhatsApp!
             </p>
             <button 
               className="text-xs text-al-green mt-2 hover:underline"
               onClick={() => setIsPopupVisible(false)}
             >
-              {t('whatsapp.dismiss')}
+              Dismiss
             </button>
           </div>
         )}
