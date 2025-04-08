@@ -8,6 +8,7 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import WhatsAppChat from '../components/WhatsAppChat';
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         </main>
         
         <Footer />
+        <WhatsAppChat />
       </div>
     </>
   );
