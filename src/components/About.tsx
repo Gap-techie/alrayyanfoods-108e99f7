@@ -46,7 +46,7 @@ const About = () => {
 
           <div className="order-1 md:order-2 glass-card overflow-hidden animate-fade-in-right">
             <img 
-              src="/images/about.jpg" 
+              src="/images/about1.jpg" 
               alt="Traditional rice farming in Punjab, Pakistan" 
               className="w-full h-full object-cover rounded-xl"
             />
