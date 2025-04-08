@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -14,24 +14,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 const Index = () => {
   const { language } = useLanguage();
   
-  // Set RTL direction for Arabic language
-  useEffect(() => {
-    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = language;
-    
-    // Add Arabic font class if language is Arabic
-    if (language === 'ar') {
-      document.body.classList.add('font-arabic');
-    } else {
-      document.body.classList.remove('font-arabic');
-    }
-    
-    return () => {
-      document.documentElement.dir = 'ltr';
-      document.body.classList.remove('font-arabic');
-    };
-  }, [language]);
-
   return (
     <>
       <SEO />

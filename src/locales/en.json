@@ -1,0 +1,145 @@
+
+{
+  "common": {
+    "language": "Language"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "whyChooseUs": "Why Choose Us",
+    "contact": "Contact Us",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "title": "Authentic Pakistani Basmati Rice",
+    "subtitle": "Experience the finest quality, traditionally grown, aromatic long-grain basmati rice from the fertile plains of Punjab, Pakistan.",
+    "exploreButton": "Explore Our Rice",
+    "quoteButton": "Get a Quote"
+  },
+  "about": {
+    "title": "About Al Rayyan",
+    "subtitle": "A heritage of excellence in bringing Pakistan's finest basmati rice to Saudi Arabia",
+    "heritage": "Our Heritage",
+    "paragraph1": "Al Rayyan was founded with a singular mission: to import the world's finest basmati rice from the fertile plains of Punjab, Pakistan to discerning consumers in Saudi Arabia and beyond.",
+    "paragraph2": "Our rice is carefully cultivated using traditional farming practices that have been perfected over generations, ensuring each grain carries the authentic aroma and texture that premium basmati is known for.",
+    "paragraph3": "We work directly with farming communities in Punjab, ensuring fair trade practices while maintaining strict quality control from field to packaging.",
+    "features": {
+      "pureBasmati": "100% Pure Basmati",
+      "ethicallySourced": "Ethically Sourced",
+      "premiumQuality": "Premium Quality"
+    },
+    "discoverProducts": "Discover Our Products"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Discover our premium selection of authentic Pakistani basmati rice",
+    "classicBasmati": {
+      "name": "Classic Basmati",
+      "description": "Our traditional long-grain basmati, aged for 12 months to develop perfect aroma and texture."
+    },
+    "royalBasmati": {
+      "name": "Royal Basmati",
+      "description": "Our flagship product, aged 24 months for unparalleled flavor and aroma, perfect for special occasions."
+    },
+    "brownBasmati": {
+      "name": "Brown Basmati",
+      "description": "Wholesome brown basmati rice with the bran layer intact, offering more fiber and nutrients."
+    },
+    "sellaBasmati": {
+      "name": "Sella Basmati",
+      "description": "Parboiled basmati that maintains its shape perfectly when cooked, ideal for biryanis and pilaus."
+    },
+    "features": {
+      "extraLongGrain": "Extra Long Grain",
+      "premiumQuality": "Premium Quality",
+      "12MonthAged": "12-Month Aged",
+      "24MonthAged": "24-Month Aged",
+      "signatureAroma": "Signature Aroma",
+      "exceptionalLength": "Exceptional Length",
+      "higherFiber": "Higher Fiber",
+      "nutrientRich": "Nutrient-Rich",
+      "authenticTaste": "Authentic Taste",
+      "parboiled": "Parboiled",
+      "nonSticky": "Non-Sticky",
+      "perfectForBiryani": "Perfect for Biryani"
+    },
+    "certifications": {
+      "title": "Our Quality Certifications",
+      "iso": "ISO 22000",
+      "haccp": "HACCP Certified",
+      "halal": "Halal Certified",
+      "organic": "Organic Certified"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Al Rayyan",
+    "subtitle": "Discover what makes our basmati rice stand out from the rest",
+    "features": {
+      "aroma": {
+        "title": "Superior Aroma",
+        "description": "Our basmati rice is known for its exceptional fragrance, filling your kitchen with an enticing aroma during cooking."
+      },
+      "quality": {
+        "title": "Premium Quality",
+        "description": "Only the finest 2% of harvested rice meets our strict quality standards, ensuring an exceptional dining experience."
+      },
+      "pure": {
+        "title": "100% Pure Basmati",
+        "description": "We guarantee pure, unadulterated basmati with no blending of inferior rice varieties."
+      },
+      "natural": {
+        "title": "Naturally Grown",
+        "description": "Our rice is cultivated using traditional methods that respect the environment and preserve the soil's health."
+      },
+      "aged": {
+        "title": "Aged to Perfection",
+        "description": "Our rice is aged for 12-24 months, enhancing its flavor, aroma, and enabling the grains to reach their full length."
+      },
+      "export": {
+        "title": "Global Export",
+        "description": "We export to over 20 countries worldwide, with reliable shipping and consistent quality in every package."
+      }
+    },
+    "difference": {
+      "title": "The Al Rayyan Difference",
+      "description": "From our carefully selected seeds to our meticulous processing and aging techniques, every step in our production chain is designed to deliver rice of exceptional quality.",
+      "points": {
+        "handSelected": "Hand-selected grains for consistent quality",
+        "traditional": "Traditional stone-ground milling preserves natural aroma",
+        "qualityControl": "Stringent quality control at every production stage",
+        "packaging": "Vacuum-sealed packaging to maintain freshness"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team for inquiries, orders, or partnerships",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Riyadh, Saudi Arabia",
+      "email": "info@alrayyanfoods.co",
+      "phone": "+966 575 649 264"
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contact": "Contact Us",
+    "newsletter": {
+      "title": "Newsletter",
+      "subtitle": "Subscribe to receive updates on new products and special offers.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    },
+    "copyright": "© {year} Al Rayyan. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

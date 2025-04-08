@@ -3,11 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, Languages } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import { useLanguage } from "../contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,12 +1,13 @@
 
-import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 
 type Language = 'en' | 'ar';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, options?: any) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -16,44 +17,30 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
-  const [translations, setTranslations] = useState<Record<string, string>>({});
-
-  // Detect browser language on mount
-  useEffect(() => {
-    const detectBrowserLanguage = () => {
-      const browserLang = navigator.language.split('-')[0];
-      return browserLang === 'ar' ? 'ar' : 'en';
-    };
-
-    const detectedLanguage = detectBrowserLanguage();
-    setLanguage(detectedLanguage);
-  }, []);
-
-  // Load translations when language changes
-  useEffect(() => {
-    const loadTranslations = async () => {
-      try {
-        const translationsModule = await import(`../translations/${language}.ts`);
-        setTranslations(translationsModule.default);
-      } catch (error) {
-        console.error('Failed to load translations:', error);
-        // Fallback to English if translations fail to load
-        const fallbackModule = await import('../translations/en.ts');
-        setTranslations(fallbackModule.default);
-      }
-    };
-
-    loadTranslations();
-  }, [language]);
-
-  // Translation function
-  const t = (key: string): string => {
-    return translations[key] || key;
+  const { t, i18n } = useTranslation();
+  
+  const setLanguage = (language: Language) => {
+    i18n.changeLanguage(language);
+    // Set RTL direction for Arabic
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = language;
+    
+    // Add Arabic font class if language is Arabic
+    if (language === 'ar') {
+      document.body.classList.add('font-arabic');
+    } else {
+      document.body.classList.remove('font-arabic');
+    }
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider 
+      value={{ 
+        language: i18n.language as Language, 
+        setLanguage, 
+        t: (key: string, options?: any) => t(key, options) 
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
