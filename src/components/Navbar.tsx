@@ -1,10 +1,13 @@
+
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +21,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'ar' : 'en');
+  };
 
   return (
     <header
@@ -40,7 +47,7 @@ const Navbar = () => {
             alt="Al Rayyan Logo"
             className="h-16"
           />
-          <div className="ml-2">
+          <div className={`${language === 'ar' ? 'mr-2' : 'ml-2'}`}>
             <h1 className="text-al-green text-xl font-playfair font-bold">Al Rayyan</h1>
             <p className="text-xs text-gray-600">Premium Basmati Rice</p>
           </div>
@@ -55,7 +62,7 @@ const Navbar = () => {
             offset={-70}
             className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
           >
-            Home
+            {t('nav.home')}
           </ScrollLink>
           <ScrollLink
             to="about"
@@ -64,7 +71,7 @@ const Navbar = () => {
             offset={-70}
             className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
           >
-            About
+            {t('nav.about')}
           </ScrollLink>
           <ScrollLink
             to="products"
@@ -73,7 +80,7 @@ const Navbar = () => {
             offset={-70}
             className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
           >
-            Products
+            {t('nav.products')}
           </ScrollLink>
           <ScrollLink
             to="why-us"
@@ -82,7 +89,7 @@ const Navbar = () => {
             offset={-70}
             className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
           >
-            Why Choose Us
+            {t('nav.whyChooseUs')}
           </ScrollLink>
           <ScrollLink
             to="contact"
@@ -91,8 +98,17 @@ const Navbar = () => {
             offset={-70}
             className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
           >
-            Contact
+            {t('nav.contact')}
           </ScrollLink>
+          
+          {/* Language Toggle Button */}
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center text-al-green hover:text-al-gold transition-colors"
+          >
+            <Languages className="w-5 h-5 mr-1" />
+            <span>{language === 'en' ? 'العربية' : 'English'}</span>
+          </button>
         </nav>
 
         {/* Desktop "Get a Quote" Button */}
@@ -104,17 +120,27 @@ const Navbar = () => {
             offset={-70}
             className="btn-secondary cursor-pointer"
           >
-            Get a Quote
+            {t('nav.getQuote')}
           </ScrollLink>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-al-green"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center space-x-4">
+          {/* Mobile Language Toggle */}
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center text-al-green px-2"
+          >
+            <Languages className="w-5 h-5" />
+          </button>
+          
+          <button
+            className="text-al-green"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -129,7 +155,7 @@ const Navbar = () => {
               className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              {t('nav.home')}
             </ScrollLink>
             <ScrollLink
               to="about"
@@ -139,7 +165,7 @@ const Navbar = () => {
               className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              {t('nav.about')}
             </ScrollLink>
             <ScrollLink
               to="products"
@@ -149,7 +175,7 @@ const Navbar = () => {
               className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
-              Products
+              {t('nav.products')}
             </ScrollLink>
             <ScrollLink
               to="why-us"
@@ -159,7 +185,7 @@ const Navbar = () => {
               className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
-              Why Choose Us
+              {t('nav.whyChooseUs')}
             </ScrollLink>
             <ScrollLink
               to="contact"
@@ -169,7 +195,7 @@ const Navbar = () => {
               className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              {t('nav.contact')}
             </ScrollLink>
             {/* Mobile "Get a Quote" Button */}
             <ScrollLink
@@ -180,7 +206,7 @@ const Navbar = () => {
               className="btn-secondary self-start cursor-pointer"
               onClick={() => setIsMenuOpen(false)} // Close the menu after clicking
             >
-              Get a Quote
+              {t('nav.getQuote')}
             </ScrollLink>
           </nav>
         </div>
