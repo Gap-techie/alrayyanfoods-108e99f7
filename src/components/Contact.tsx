@@ -151,10 +151,10 @@ const Contact = () => {
                 <MapPin className="w-5 h-5 text-al-gold mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-700">
-                    Al Rayyan Food Exports<br />
-                    123 Business Avenue<br />
-                    Lahore, Punjab<br />
-                    Pakistan
+                    <b>Al Rayyan Food imports</b> <br />
+                    Old Yanbu Road, Old Industrial<br />
+                    Madinah Al-Munawarah<br />
+                    Kingdom of Saudi Arabia
                   </p>
                 </div>
               </div>
@@ -166,13 +166,13 @@ const Contact = () => {
                 <div className="flex items-center space-x-4">
                   <Mail className="w-5 h-5 text-al-gold flex-shrink-0" />
                   <a href="mailto:info@alrayyanrice.com" className="text-gray-700 hover:text-al-green">
-                    info@alrayyanrice.com
+                    info@alrayyanfoods.co
                   </a>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="w-5 h-5 text-al-gold flex-shrink-0" />
-                  <a href="tel:+923001234567" className="text-gray-700 hover:text-al-green">
-                    +92 300 123 4567
+                  <a href="tel:+966575649264" className="text-gray-700 hover:text-al-green">
+                    +966 575 649 264
                   </a>
                 </div>
               </div>
