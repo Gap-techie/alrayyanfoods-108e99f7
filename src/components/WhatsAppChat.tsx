@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 
@@ -34,17 +33,19 @@ const WhatsAppChat: React.FC = () => {
       <div className="relative">
         {/* Popup Message - Positioned Above */}
         {isPopupVisible && (
-          <div className="absolute bottom-16 right-0 bg-white shadow-xl rounded-lg p-4 mb-2 max-w-[250px] animate-fade-in">
+          <div className="absolute bottom-16 right-0 bg-white shadow-xl rounded-lg p-2 mb-2 max-w-[250px] flex items-center animate-fade-in">
             <div className="absolute -bottom-2 right-5 w-4 h-4 bg-white transform rotate-45"></div>
-            <p className="text-gray-800 text-sm font-medium">
-              Need help with our products? Chat with us on WhatsApp!
-            </p>
-            <button 
-              className="text-xs text-al-green mt-2 hover:underline"
-              onClick={() => setIsPopupVisible(false)}
-            >
-              Dismiss
-            </button>
+            <div className="flex-1">
+              <p className="text-gray-800 text-xs font-medium truncate">
+                Chat with us on WhatsApp!
+              </p>
+              <button 
+                className="text-xs text-al-green ml-2 hover:underline"
+                onClick={() => setIsPopupVisible(false)}
+              >
+                Dismiss
+              </button>
+            </div>
           </div>
         )}
         
