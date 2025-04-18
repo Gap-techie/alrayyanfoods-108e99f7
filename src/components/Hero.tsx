@@ -41,10 +41,10 @@ const Hero = () => {
                 smooth={true}
                 duration={500}
                 offset={-70}
-                className="bg-al-gold hover:bg-al-gold-light text-al-green-dark font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                className="bg-al-gold hover:bg-al-gold-light text-al-green-dark font-medium text-base px-6 py-2.5 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
               >
                 Explore Our Rice
-                <ChevronRight className="h-5 w-5" />
+                <ChevronRight className="h-4 w-4" />
               </ScrollLink>
 
               {/* Get a Quote Button */}
@@ -53,10 +53,10 @@ const Hero = () => {
                 smooth={true}
                 duration={500}
                 offset={-70}
-                className="border-2 border-white text-white hover:bg-white hover:text-al-green font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-al-green font-medium text-base px-6 py-2.5 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
               >
                 Get a Quote
-                <Mail className="h-5 w-5" />
+                <Mail className="h-4 w-4" />
               </ScrollLink>
             </div>
           </div>
