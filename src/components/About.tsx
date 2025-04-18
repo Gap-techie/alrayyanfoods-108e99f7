@@ -26,8 +26,8 @@ const About = () => {
           <div className="order-1 md:order-2">
             <div className="relative rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/185609ba-d12f-412f-bc1e-5c39e500341f.png"
-                alt="Rice farmer in Punjab showing premium basmati rice" 
+                src="/lovable-uploads/6eab4cdc-9b8e-4ade-b086-0a0c1d6a399c.png"
+                alt="Rice farmer showcasing premium basmati rice in Punjab fields at sunset" 
                 className="w-full h-auto object-cover rounded-lg transition-transform hover:scale-105 duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
