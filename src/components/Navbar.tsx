@@ -23,7 +23,7 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/70 backdrop-blur-lg shadow-md py-3"
+          ? "bg-white/90 backdrop-blur-lg shadow-md py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -41,8 +41,16 @@ const Navbar = () => {
             className="h-16"
           />
           <div className="ml-2">
-            <h1 className="text-al-green text-xl font-playfair font-bold">Al Rayyan</h1>
-            <p className="text-xs text-gray-600">Premium Basmati Rice</p>
+            <h1 className={`text-xl font-playfair font-bold transition-colors duration-300 ${
+              isScrolled ? "text-al-green" : "text-white"
+            }`}>
+              Al Rayyan
+            </h1>
+            <p className={`text-xs transition-colors duration-300 ${
+              isScrolled ? "text-gray-600" : "text-white/80"
+            }`}>
+              Premium Basmati Rice
+            </p>
           </div>
         </ScrollLink>
 
@@ -53,7 +61,9 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-70}
-            className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
+            className={`transition-colors duration-300 cursor-pointer ${
+              isScrolled ? "text-al-green hover:text-al-gold" : "text-white hover:text-al-gold"
+            }`}
           >
             Home
           </ScrollLink>
@@ -62,7 +72,9 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-70}
-            className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
+            className={`transition-colors duration-300 cursor-pointer ${
+              isScrolled ? "text-al-green hover:text-al-gold" : "text-white hover:text-al-gold"
+            }`}
           >
             About
           </ScrollLink>
@@ -71,7 +83,9 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-70}
-            className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
+            className={`transition-colors duration-300 cursor-pointer ${
+              isScrolled ? "text-al-green hover:text-al-gold" : "text-white hover:text-al-gold"
+            }`}
           >
             Products
           </ScrollLink>
@@ -80,7 +94,9 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-70}
-            className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
+            className={`transition-colors duration-300 cursor-pointer ${
+              isScrolled ? "text-al-green hover:text-al-gold" : "text-white hover:text-al-gold"
+            }`}
           >
             Why Choose Us
           </ScrollLink>
@@ -89,7 +105,9 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-70}
-            className="text-al-green hover:text-al-gold transition-colors cursor-pointer"
+            className={`transition-colors duration-300 cursor-pointer ${
+              isScrolled ? "text-al-green hover:text-al-gold" : "text-white hover:text-al-gold"
+            }`}
           >
             Contact
           </ScrollLink>
@@ -102,7 +120,11 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-70}
-            className="btn-secondary cursor-pointer"
+            className={`transition-all duration-300 cursor-pointer ${
+              isScrolled 
+                ? "border-2 border-al-green text-al-green hover:bg-al-green hover:text-white"
+                : "border-2 border-white text-white hover:bg-white hover:text-al-green"
+            } font-medium text-base px-6 py-2 h-auto flex items-center gap-2 rounded-lg shadow-lg transform hover:scale-105`}
           >
             Get a Quote
           </ScrollLink>
@@ -110,7 +132,9 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-al-green"
+          className={`md:hidden transition-colors duration-300 ${
+            isScrolled ? "text-al-green" : "text-white"
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -178,7 +202,7 @@ const Navbar = () => {
               duration={500}
               offset={-70}
               className="btn-secondary self-start cursor-pointer"
-              onClick={() => setIsMenuOpen(false)} // Close the menu after clicking
+              onClick={() => setIsMenuOpen(false)}
             >
               Get a Quote
             </ScrollLink>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 
@@ -12,11 +11,11 @@ const About = () => {
         {/* Section Header - Mobile First */}
         <div className="text-center px-4 mb-8 md:mb-16">
           <h2 className="section-title text-2xl md:text-4xl font-bold relative inline-block">
-            About Al Rayyan
+            About Al Rayyan - Premium Pakistani Basmati Rice
             <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-20 md:w-24 h-1 bg-al-gold"></span>
           </h2>
           <p className="section-subtitle mt-6 md:mt-8 text-sm md:text-base font-light text-gray-700 max-w-xl mx-auto">
-            A heritage of excellence in bringing Pakistan's finest basmati rice to Saudi Arabia
+            A heritage of excellence in bringing Pakistan's finest premium basmati rice to Saudi Arabia.
           </p>
         </div>
 
@@ -27,7 +26,7 @@ const About = () => {
             <div className="relative w-full rounded-lg overflow-hidden shadow-xl">
               <img 
                 src="/lovable-uploads/6eab4cdc-9b8e-4ade-b086-0a0c1d6a399c.png"
-                alt="Rice farmer showcasing premium basmati rice in Punjab fields at sunset" 
+                alt="Premium Punjab basmati rice fields - Al Rayyan's source for quality basmati in Saudi Arabia" 
                 className="w-full h-full object-cover rounded-lg transition-transform hover:scale-105 duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -39,7 +38,7 @@ const About = () => {
             <div className="arabic-border p-6 md:p-8 rounded-lg bg-white/90 backdrop-blur-sm w-full flex flex-col justify-between">
               <div>
                 <h3 className="text-xl md:text-2xl font-playfair font-bold text-al-green mb-4 md:mb-6">
-                  Our Heritage
+                  Our Heritage in Premium Basmati
                   <span className="block w-16 h-0.5 bg-al-gold mt-2"></span>
                 </h3>
                 
@@ -49,13 +48,13 @@ const About = () => {
                     the fertile plains of Punjab, Pakistan to discerning consumers in Saudi Arabia and beyond.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Our rice is carefully cultivated using traditional farming practices that have been 
+                    Our premium Pakistani basmati rice is carefully cultivated using traditional farming practices that have been 
                     perfected over generations, ensuring each grain carries the authentic aroma and 
-                    texture that premium basmati is known for.
+                    texture that genuine Punjab basmati is known for.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     We work directly with farming communities in Punjab, ensuring fair trade practices 
-                    while maintaining strict quality control from field to packaging.
+                    while maintaining strict quality control from field to packaging, delivering the best basmati rice in Saudi Arabia.
                   </p>
                 </div>
               </div>
@@ -76,9 +75,9 @@ const About = () => {
                 
                 {/* CTA - Mobile Optimized */}
                 <div className="mt-8">
-                  <a href="#products" className="inline-flex items-center group">
+                  <a href="#products" className="inline-flex items-center group" aria-label="View our premium basmati rice products">
                     <span className="text-al-green text-sm md:text-base font-medium mr-2 group-hover:text-al-gold transition-colors">
-                      Discover Our Products
+                      Discover Our Premium Basmati Products
                     </span>
                     <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-al-gold transition-transform group-hover:translate-x-1" />
                   </a>

@@ -6,67 +6,58 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
-      {/* Background pattern */}
-      <div className="absolute inset-0 z-0 bg-pattern"></div>
+      {/* Video background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/lovable-uploads/herosection.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Vignette effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/70"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.5)_100%)]"></div>
+      </div>
 
       {/* Content */}
       <div className="container-custom relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Left content */}
-          <div className="max-w-xl">
-            <div className="mb-8 animate-fade-in-right">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-al-green mb-6 font-playfair leading-tight">
-                Authentic Pakistani Basmati Rice
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 mb-8">
-                Experience the finest quality, traditionally grown, aromatic long-grain
-                basmati rice from the fertile plains of Punjab, Pakistan.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                {/* Explore Our Rice Button */}
-                <ScrollLink
-                  to="products"
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className="bg-al-gold hover:bg-al-gold-light text-al-green-dark font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
-                >
-                  Explore Our Rice
-                  <ChevronRight className="h-5 w-5" />
-                </ScrollLink>
+        <div className="max-w-xl">
+          <div className="mb-8 animate-fade-in-right">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-playfair leading-tight">
+            Premium Authentic Pakistani Basmati Rice - Direct from Punjab
+            {/* Authentic Pakistani Basmati Rice */}
+            </h1>
+            <p className="text-lg md:text-lg text-white/90 mb-8">
+               Experience the finest quality, traditionally grown, aromatic long-grain basmati rice from the fertile plains of Punjab, Pakistan. Our premium basmati rice delivers exceptional taste, perfect texture, and authentic aroma for your Kabsa, Bukhari, biryani, pulao, and special dishes in Saudi Arabia.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              {/* Explore Our Rice Button */}
+              <ScrollLink
+                to="products"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="bg-al-gold hover:bg-al-gold-light text-al-green-dark font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              >
+                Explore Our Rice
+                <ChevronRight className="h-5 w-5" />
+              </ScrollLink>
 
-                {/* Get a Quote Button */}
-                <ScrollLink
-                  to="contact"
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className="border-2 border-al-green text-al-green hover:bg-al-green hover:text-white font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
-                >
-                  Get a Quote
-                  <Mail className="h-5 w-5" />
-                </ScrollLink>
-              </div>
-            </div>
-          </div>
-
-          {/* Right content - Product showcase */}
-          <div className="hidden md:flex justify-end">
-            <div className="relative">
-              <div className="absolute -top-10 -left-10 w-60 h-60 bg-al-gold/10 rounded-full blur-xl z-0"></div>
-              <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-al-green/10 rounded-full blur-xl z-0"></div>
-              <div className="relative z-10 flex gap-4">
-                <img
-                  src="/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png"
-                  alt="Premium Basmati Rice"
-                  className="h-[400px] object-contain transform -rotate-6 hover:rotate-0 transition-transform duration-300"
-                />
-                <img
-                  src="/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png"
-                  alt="Royal Basmati Rice"
-                  className="h-[400px] object-contain transform rotate-6 hover:rotate-0 transition-transform duration-300 mt-8"
-                />
-              </div>
+              {/* Get a Quote Button */}
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="border-2 border-white text-white hover:bg-white hover:text-al-green font-medium text-base px-6 py-4 h-auto flex items-center gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              >
+                Get a Quote
+                <Mail className="h-5 w-5" />
+              </ScrollLink>
             </div>
           </div>
         </div>
@@ -79,7 +70,7 @@ const Hero = () => {
           smooth={true}
           duration={500}
           offset={-70}
-          className="text-al-green hover:text-al-gold transition-colors"
+          className="text-white hover:text-al-gold transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
