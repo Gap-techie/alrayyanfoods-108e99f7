@@ -21,10 +21,10 @@ const About = () => {
         </div>
 
         {/* Content Grid - Mobile First */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Image Section - Shows first on mobile */}
-          <div className="order-1 md:order-2 h-full">
-            <div className="relative rounded-lg overflow-hidden shadow-xl h-full">
+          <div className="order-1 md:order-2 flex items-stretch">
+            <div className="relative w-full rounded-lg overflow-hidden shadow-xl">
               <img 
                 src="/lovable-uploads/6eab4cdc-9b8e-4ade-b086-0a0c1d6a399c.png"
                 alt="Rice farmer showcasing premium basmati rice in Punjab fields at sunset" 
@@ -35,8 +35,8 @@ const About = () => {
           </div>
 
           {/* Content Section */}
-          <div className="order-2 md:order-1 space-y-6 px-4 md:px-0 h-full">
-            <div className="arabic-border p-6 md:p-8 rounded-lg bg-white/90 backdrop-blur-sm h-full flex flex-col justify-between">
+          <div className="order-2 md:order-1 flex items-stretch px-4 md:px-0">
+            <div className="arabic-border p-6 md:p-8 rounded-lg bg-white/90 backdrop-blur-sm w-full flex flex-col justify-between">
               <div>
                 <h3 className="text-xl md:text-2xl font-playfair font-bold text-al-green mb-4 md:mb-6">
                   Our Heritage
