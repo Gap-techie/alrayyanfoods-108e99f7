@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Mail, Phone, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -44,29 +44,59 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-white/80 hover:text-white transition-colors">
+                <ScrollLink
+                  to="hero"
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
                   Home
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link to="#about" className="text-white/80 hover:text-white transition-colors">
+                <ScrollLink
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
                   About Us
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link to="#products" className="text-white/80 hover:text-white transition-colors">
+                <ScrollLink
+                  to="products"
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
                   Our Products
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link to="#why-us" className="text-white/80 hover:text-white transition-colors">
+                <ScrollLink
+                  to="why-us"
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
                   Why Choose Us
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link to="#contact" className="text-white/80 hover:text-white transition-colors">
+                <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
                   Contact Us
-                </Link>
+                </ScrollLink>
               </li>
             </ul>
           </div>
