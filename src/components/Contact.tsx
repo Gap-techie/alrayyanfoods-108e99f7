@@ -181,14 +181,13 @@ const Contact = () => {
             <div className="glass-card p-6 rounded-xl">
               <h3 className="text-xl font-playfair font-bold text-al-green mb-4">Export Information</h3>
               <p className="text-gray-700 mb-4">
-                We pride ourselves on our efficient international shipping process, with export capabilities
-                to over 20 countries worldwide.
+                We pride ourselves on our efficient international shipping process, with export capabilities worldwide.
               </p>
               <ul className="space-y-2">
                 {[
                   "Available in bulk quantities from 1 to 1000 metric tons",
                   "Customized packaging options for distributors",
-                  "HACCP and ISO certified export processes",
+                  // "HACCP and ISO certified export processes",
                   "Fast and reliable shipping worldwide"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
