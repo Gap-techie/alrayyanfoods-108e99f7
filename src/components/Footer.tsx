@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { FaSnapchat, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -35,6 +36,12 @@ const Footer = () => {
               </a>
               <a href="#" className="text-white/80 hover:text-white transition-colors">
                 <Linkedin size={20} />
+              </a>
+              <a href="https://snapchat.com/t/NsiTZsfH" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                <FaSnapchat size={20} />
+              </a>
+              <a href="https://wa.me/966575649264" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                <FaWhatsapp size={20} />
               </a>
             </div>
           </div>

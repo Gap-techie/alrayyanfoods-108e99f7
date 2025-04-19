@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const productsData = [
@@ -46,9 +45,9 @@ const ProductCard = ({ product }: { product: typeof productsData[0] }) => {
       <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
       <div className="flex flex-wrap gap-2 mt-auto">
         {product.features.map((feature, index) => (
-          <span 
-            key={index} 
-            className="text-xs bg-al-gold-faded text-al-gold-dark px-3 py-1 rounded-full"
+          <span
+            key={index}
+            className="text-xs bg-al-gold/10 text-al-green px-3 py-1 rounded-full"
           >
             {feature}
           </span>
@@ -73,24 +72,6 @@ const Products = () => {
           {productsData.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <h3 className="text-xl font-semibold text-al-green mb-6">Our Quality Certifications</h3>
-          <div className="flex justify-center flex-wrap gap-8">
-            <div className="glass-panel px-6 py-4 rounded-lg">
-              <p className="font-semibold">ISO 22000</p>
-            </div>
-            <div className="glass-panel px-6 py-4 rounded-lg">
-              <p className="font-semibold">HACCP Certified</p>
-            </div>
-            <div className="glass-panel px-6 py-4 rounded-lg">
-              <p className="font-semibold">Halal Certified</p>
-            </div>
-            <div className="glass-panel px-6 py-4 rounded-lg">
-              <p className="font-semibold">Organic Certified</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

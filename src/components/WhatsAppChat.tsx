@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppChat: React.FC = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -54,10 +54,10 @@ const WhatsAppChat: React.FC = () => {
           onClick={openWhatsApp}
           onMouseEnter={() => !isPopupVisible && setIsPopupVisible(true)}
           onMouseLeave={() => setTimeout(() => setIsPopupVisible(false), 2000)}
-          className="bg-[#25D366] hover:bg-[#22c55e] text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center whatsapp-button-pulse"
+          className="bg-[#25D366] hover:bg-[#22c55e] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center whatsapp-button-pulse"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="w-6 h-6" />
+          <FaWhatsapp size={28} />
         </button>
       </div>
     </div>
