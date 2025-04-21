@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Check } from 'lucide-react';
+import ArabicPattern from './ArabicPattern';
 
 const Contact = () => {
   const [formState, setFormState] = useState({

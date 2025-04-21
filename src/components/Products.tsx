@@ -3,31 +3,17 @@ import React from 'react';
 const productsData = [
   {
     id: 1,
-    name: "Classic Basmati",
-    description: "Our traditional long-grain basmati, aged for 12 months to develop perfect aroma and texture.",
-    image: "/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
-    features: ["Extra Long Grain", "Premium Quality", "12-Month Aged"]
+    name: "Sella Basmati",
+    description: "Our traditional long-grain basmati, aged for 12 months to develop perfect aroma and texture, maintains its shape perfectly when cooked, ideal for, Kabsa, Bukhari, Biryanis and pilaus.",
+    image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
+    features: ["Rank #1", "Extra Long Grain", "Premium Quality", "12-Month Aged", "Nutrient-Rich", "Authentic Taste"]
   },
   {
     id: 2,
     name: "Royal Basmati",
-    description: "Our flagship product, aged 24 months for unparalleled flavor and aroma, perfect for special occasions.",
-    image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
-    features: ["24-Month Aged", "Signature Aroma", "Exceptional Length"]
-  },
-  {
-    id: 3,
-    name: "Brown Basmati",
-    description: "Wholesome brown basmati rice with the bran layer intact, offering more fiber and nutrients.",
+    description: "Our flagship product, aged 24 months for unparalleled flavor and aroma, perfect for special occasions, maintains its shape perfectly when cooked, ideal for, Kabsa, Bukhari, Biryanis and pilaus.",
     image: "/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
-    features: ["Higher Fiber", "Nutrient-Rich", "Authentic Taste"]
-  },
-  {
-    id: 4,
-    name: "Sella Basmati",
-    description: "Parboiled basmati that maintains its shape perfectly when cooked, ideal for biryanis and pilaus.",
-    image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
-    features: ["Parboiled", "Non-Sticky", "Perfect for Biryani"]
+    features: ["Rank #1", "Extra Long Grain", "24-Month Aged", "Signature Aroma", "Exceptional Length", "Nutrient-Rich", "Authentic Taste"]
   }
 ];
 
@@ -38,7 +24,7 @@ const ProductCard = ({ product }: { product: typeof productsData[0] }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-60 object-contain group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-80 object-contain group-hover:scale-105 transition-transform duration-500"
         />
       </div>
       <h3 className="text-xl font-playfair font-bold text-al-green mb-2">{product.name}</h3>
@@ -68,7 +54,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
           {productsData.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
