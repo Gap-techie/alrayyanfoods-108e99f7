@@ -15,9 +15,8 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-6">
               <img
-                src="/lovable-uploads/71d0eb0a-071d-4b53-b9d0-0377fba97623.png"
-                alt="Al Rayyan Logo"
-                className="h-12 bg-white rounded-full p-1"
+                src="/lovable-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
+                className="h-16"
               />
               <h3 className="text-2xl font-playfair font-bold ml-3">Al Rayyan</h3>
             </div>

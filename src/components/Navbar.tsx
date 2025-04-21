@@ -23,7 +23,7 @@ const Navbar = () => {
   const ctaButtonClasses = `
     relative
     before:absolute before:inset-0 before:rounded-full before:p-[2px]
-    before:bg-gradient-to-r before:from-[#d3b036] before:via-[#00c400] before:to-[#2a593e]
+    before:bg-gradient-to-r before:from-[#d3b036] before:to-[#00c400] before:to-[#2a593e]
     before:-z-10
     isolate
     ${isScrolled ? 'text-[#2a593e]' : 'text-white'}

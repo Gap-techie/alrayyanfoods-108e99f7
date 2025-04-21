@@ -55,7 +55,7 @@ Company: ${formData.companyName}%0A
 Address: ${formData.address}%0A%0A
 *Order Details*%0A
 Product: ${formData.product}%0A
-Quantity: ${formData.quantity}%0A
+Quantity: ${formData.quantity} kg %0A
 Notes: ${formData.notes}`;
 
     // Open WhatsApp with pre-filled message
@@ -239,9 +239,9 @@ Notes: ${formData.notes}`;
             <div className="flex justify-center pt-4">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-[#d3b036] via-[#00c400] to-[#2a593e] text-white px-12 py-4 rounded-full font-medium flex items-center gap-2 transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl hover:brightness-105"
+                className="bg-gradient-to-r from-[#deff46] to-[#00c400] text-black px-12 py-4 rounded-full font-medium flex items-center gap-2 transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl hover:brightness-105"
               >
-                Get a Quote
+                Submit your order
                 <FaWhatsapp className="w-6 h-6" />
               </button>
             </div>

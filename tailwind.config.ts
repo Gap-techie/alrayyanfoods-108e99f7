@@ -69,16 +69,37 @@ export default {
 					dark: '#1E3F2C',
 					faded: 'rgba(42, 89, 62, 0.1)',
 				},
+				'al-live-green': {
+					DEFAULT: '#05a900',
+					light: '#00E500',
+					dark: '#00A300',
+					faded: 'rgba(0, 196, 0, 0.12)',
+				},
 				'al-gold': {
 					DEFAULT: '#D4AF37',
 					light: '#E5C158',
 					dark: '#B39329',
 					faded: 'rgba(212, 175, 55, 0.12)',
 				},
+				'al-lime': {
+					DEFAULT: '#daff45',
+					light: '#00E500',
+					dark: '#00A300',
+					faded: 'rgba(0, 196, 0, 0.12)',
+				},
+				'al-greenish': {
+					DEFAULT: '#00c400',
+					light: '#00E500',
+					dark: '#00A300',
+					faded: 'rgba(0, 196, 0, 0.12)',
+				},
 				'al-cream': {
 					DEFAULT: '#F9F5EB',
 					light: '#FFFEF9',
 					dark: '#E7E2D8',
+				},
+				backgroundImage: {
+					'green-lime-gradient': 'linear-gradient(to right, #deff46, #00c400)',
 				},
 				'al-beige': '#F0EBD8',
 				'al-white': '#FFFFFF',
@@ -104,7 +125,7 @@ export default {
 				'fade-in-right': {
 					'0%': { opacity: '0', transform: 'translateX(10px)' },
 					'100%': { opacity: '1', transform: 'translateX(0)' },
-					},
+				},
 				fadeIn: {
 					'0%': { opacity: 0 },
 					'100%': { opacity: 1 },

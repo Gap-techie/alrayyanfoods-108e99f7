@@ -31,7 +31,7 @@ const Hero = () => {
             Premium Authentic Pakistani Basmati Rice - Direct from Punjab
             {/* Authentic Pakistani Basmati Rice */}
             </h1>
-            <p className="text-lg md:text-lg text-white/90 mb-8">
+            <p className="text-lg md:text-sm text-white/90 mb-8">
                Experience the finest quality, traditionally grown, aromatic long-grain basmati rice from the fertile plains of Punjab, Pakistan. Our premium basmati rice delivers exceptional taste, perfect texture, and authentic aroma for your Kabsa, Bukhari, biryani, pulao, and special dishes in Saudi Arabia.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
