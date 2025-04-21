@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +19,23 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const ctaButtonClasses = `
+    relative
+    before:absolute before:inset-0 before:rounded-full before:p-[2px]
+    before:bg-gradient-to-r before:from-[#d3b036] before:via-[#00c400] before:to-[#2a593e]
+    before:-z-10
+    isolate
+    ${isScrolled ? 'text-[#2a593e]' : 'text-white'}
+    font-medium px-6 py-2.5 rounded-full
+    shadow-lg hover:shadow-xl
+    transform hover:scale-105 transition-all duration-300
+    flex items-center gap-2
+    after:absolute after:inset-[1px] after:rounded-full
+    after:bg-gradient-to-r after:from-[#d3b036] after:via-[#00c400] after:to-[#2a593e]
+    after:-z-10 after:opacity-0 hover:after:opacity-100
+    after:transition-opacity
+  `;
 
   return (
     <header
@@ -115,19 +133,12 @@ const Navbar = () => {
 
         {/* Desktop "Get a Quote" Button */}
         <div className="hidden md:block">
-          <ScrollLink
-            to="contact"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className={`transition-all duration-300 cursor-pointer ${
-              isScrolled 
-                ? "border-2 border-al-green text-al-green hover:bg-al-green hover:text-white"
-                : "border-2 border-white text-white hover:bg-white hover:text-al-green"
-            } font-medium text-base px-6 py-2 h-auto flex items-center gap-2 rounded-lg shadow-lg transform hover:scale-105`}
+          <Link
+            to="/pre-order"
+            className={ctaButtonClasses}
           >
-            Get a Quote
-          </ScrollLink>
+            Place Pre-Order Now
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -195,17 +206,15 @@ const Navbar = () => {
             >
               Contact
             </ScrollLink>
+            
             {/* Mobile "Get a Quote" Button */}
-            <ScrollLink
-              to="contact"
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="btn-secondary self-start cursor-pointer"
+            <Link
+              to="/pre-order"
+              className={`${ctaButtonClasses} justify-center`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Get a Quote
-            </ScrollLink>
+              Place Pre-Order Now
+            </Link>
           </nav>
         </div>
       )}
