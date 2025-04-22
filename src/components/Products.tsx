@@ -4,16 +4,34 @@ const productsData = [
   {
     id: 1,
     name: "Royal Basmati",
-    description: "Our traditional long-grain basmati, aged for 12 months to develop perfect aroma and texture, maintains its shape perfectly when cooked, ideal for, Kabsa, Bukhari, Biryanis and pilaus.",
+    description: "12-month aged premium basmati rice from Pakistan, known for its extra-long grains, sweet aroma, and creamy texture. Perfect for  Kabsa, Bukhari, Biryani, Pulao, and festive meals. Enjoy authentic flavor and fluffy, separate grains in every dish.",
     image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
-    features: ["Rank #1", "Extra Long Grain", "Premium Quality", "12-Month Aged", "Nutrient-Rich", "Authentic Taste"]
+    features: [
+      "Extra Long Grain",
+      "Nutrient-Rich", 
+      "Aged Basmati Rice",
+      "Pakistani Premium Rice",
+      "Extra-Long Grain Rice",
+      "Fluffy and Separate Grains",
+      "Creamy Texture",
+      "Authentic Flavor"
+    ]
   },
   {
     id: 2,
     name: "Golden Basmati",
-    description: "Our flagship product, aged 24 months for unparalleled flavor and aroma, perfect for special occasions, maintains its shape perfectly when cooked, ideal for, Kabsa, Bukhari, Biryanis and pilaus.",
+    description: "Premium aged golden basmati rice from Pakistan, known for its distinct golden hue, floral aroma, and buttery flavor. Enjoy fluffy, separate grains in biryanis, pulao, and special occasions. A true culinary treasure for authentic and aromatic rice dishes",
     image: "/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
-    features: ["Rank #1", "Extra Long Grain", "24-Month Aged", "Signature Aroma", "Exceptional Length", "Nutrient-Rich", "Authentic Taste"]
+    features: [
+      "Signature Basmati Aroma",  
+      "Nutrient-Rich",
+      "Premium Aged",
+      "Fluffy Rice",
+      "Golden Sella Rice",
+      "Extra Long Grain",
+      "Authentic Taste",
+      "Perfect for Eid and weddings"
+    ]
   }
 ];
 
