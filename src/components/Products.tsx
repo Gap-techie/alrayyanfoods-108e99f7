@@ -3,14 +3,14 @@ import React from 'react';
 const productsData = [
   {
     id: 1,
-    name: "Sella Basmati",
+    name: "Royal Basmati",
     description: "Our traditional long-grain basmati, aged for 12 months to develop perfect aroma and texture, maintains its shape perfectly when cooked, ideal for, Kabsa, Bukhari, Biryanis and pilaus.",
     image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
     features: ["Rank #1", "Extra Long Grain", "Premium Quality", "12-Month Aged", "Nutrient-Rich", "Authentic Taste"]
   },
   {
     id: 2,
-    name: "Royal Basmati",
+    name: "Golden Basmati",
     description: "Our flagship product, aged 24 months for unparalleled flavor and aroma, perfect for special occasions, maintains its shape perfectly when cooked, ideal for, Kabsa, Bukhari, Biryanis and pilaus.",
     image: "/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
     features: ["Rank #1", "Extra Long Grain", "24-Month Aged", "Signature Aroma", "Exceptional Length", "Nutrient-Rich", "Authentic Taste"]
