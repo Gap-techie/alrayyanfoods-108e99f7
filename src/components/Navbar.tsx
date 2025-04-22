@@ -26,7 +26,7 @@ const Navbar = () => {
     before:bg-gradient-to-r before:from-[#d3b036] before:to-[#00c400] before:to-[#2a593e]
     before:-z-10
     isolate
-    ${isScrolled ? 'text-[#2a593e]' : 'text-white'}
+    ${isScrolled ? 'text-white' : 'text-white'}
     font-medium px-6 py-2.5 rounded-full
     shadow-lg hover:shadow-xl
     transform hover:scale-105 transition-all duration-300
@@ -144,7 +144,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           className={`md:hidden transition-colors duration-300 ${
-            isScrolled ? "text-al-green" : "text-white"
+            isScrolled ? "text-white" : "text-white"
           }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
