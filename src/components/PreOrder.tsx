@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { IoArrowBack } from 'react-icons/io5';
+import { postPreOrder } from '../services/preOrderService';
+import { toast } from 'sonner';
 
 interface PreOrderFormData {
     name: string;
@@ -15,13 +17,14 @@ interface PreOrderFormData {
 }
 
 const PreOrder: React.FC = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState<PreOrderFormData>({
         name: '',
         email: '',
         phone: '',
         companyName: '',
         address: '',
-        product: 'Classic Basmati',
+        product: 'Royal Basmati',
         quantity: '',
         notes: ''
     });
@@ -39,11 +42,28 @@ const PreOrder: React.FC = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
 
-        // Construct WhatsApp message
-        const message = `*New Pre-Order Request*%0A
+        try {
+            // Submit to Google Sheets
+            const response = await postPreOrder({
+                fullName: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+                company: formData.companyName,
+                address: formData.address,
+                riceType: formData.product,
+                quantity: formData.quantity,
+                notes: formData.notes
+            });
+
+            if (response.success) {
+                toast.success('Order submitted successfully!');
+
+                // Construct WhatsApp message
+                const message = `*New Pre-Order Request*%0A
 ------------------------%0A
 *Customer Details*%0A
 Name: ${formData.name}%0A
@@ -56,20 +76,29 @@ Product: ${formData.product}%0A
 Quantity: ${formData.quantity} kg %0A
 Notes: ${formData.notes}`;
 
-        // Open WhatsApp with pre-filled message
-        window.open(`https://wa.me/966575649264?text=${message}`, '_blank');
+                // Open WhatsApp with pre-filled message
+                window.open(`https://wa.me/966575649264?text=${message}`, '_blank');
 
-        // Reset form
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            companyName: '',
-            address: '',
-            product: 'Classic Basmati',
-            quantity: '',
-            notes: ''
-        });
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    companyName: '',
+                    address: '',
+                    product: 'Royal Basmati',
+                    quantity: '',
+                    notes: ''
+                });
+            } else {
+                toast.error(response.message || 'Failed to submit order. Please try again.');
+            }
+        } catch (error) {
+            toast.error('An error occurred. Please try again later.');
+            console.error('Form submission error:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
