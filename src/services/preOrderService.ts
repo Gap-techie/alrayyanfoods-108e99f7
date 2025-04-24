@@ -7,11 +7,10 @@ export interface PreOrderData {
     address:  string;
     riceType: string;
     quantity: string;
+    payment_method: string;
     notes:    string;
 }
 
-// Replace this URL with your Google Apps Script Web App URL
-// It should look something like: https://script.google.com/macros/s/YOUR-SCRIPT-ID/exec
 const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzOuLcf6-OLR7t59YFbNr_Ge2f8AB3kQ08oqLlxB3ij7gCK6wMZHX53S_cegHAWruc0pA/exec';
 
 export async function postPreOrder(data: PreOrderData): Promise<{ success: boolean; message?: string }> {

@@ -13,6 +13,7 @@ interface PreOrderFormData {
     address: string;
     product: string;
     quantity: string;
+    payment_method: string;
     notes: string;
 }
 
@@ -26,12 +27,18 @@ const PreOrder: React.FC = () => {
         address: '',
         product: 'Royal Basmati',
         quantity: '',
+        payment_method: 'Cash',
         notes: ''
     });
 
     const products = [
         "Royal Basmati",
         "Sella Basmati"
+    ];
+
+    const paymentMethods = [
+        "Cash",
+        "Bank"
     ];
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -56,6 +63,7 @@ const PreOrder: React.FC = () => {
                 address: formData.address,
                 riceType: formData.product,
                 quantity: formData.quantity,
+                payment_method: formData.payment_method,
                 notes: formData.notes
             });
 
@@ -73,7 +81,8 @@ Company: ${formData.companyName}%0A
 Address: ${formData.address}%0A%0A
 *Order Details*%0A
 Product: ${formData.product}%0A
-Quantity: ${formData.quantity} kg %0A
+Quantity: ${formData.quantity} kg%0A
+Payment Method: ${formData.payment_method}%0A
 Notes: ${formData.notes}`;
 
                 // Open WhatsApp with pre-filled message
@@ -88,6 +97,7 @@ Notes: ${formData.notes}`;
                     address: '',
                     product: 'Royal Basmati',
                     quantity: '',
+                    payment_method: 'Cash',
                     notes: ''
                 });
             } else {
@@ -161,7 +171,9 @@ Notes: ${formData.notes}`;
                                     placeholder="your@email.com"
                                 />
                             </div>
+                        </div>
 
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
                                     Phone Number *
@@ -194,19 +206,41 @@ Notes: ${formData.notes}`;
                             </div>
                         </div>
 
-                        <div>
-                            <label htmlFor="address" className="block text-gray-700 font-medium mb-2">
-                                Address
-                            </label>
-                            <textarea
-                                id="address"
-                                name="address"
-                                rows={3}
-                                value={formData.address}
-                                onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#00c400] focus:ring-2 focus:ring-[#00c400]/20 transition-colors placeholder-gray-400"
-                                placeholder="Your address (optional)"
-                            />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label htmlFor="address" className="block text-gray-700 font-medium mb-2">
+                                    Address
+                                </label>
+                                <textarea
+                                    id="address"
+                                    name="address"
+                                    rows={2}
+                                    value={formData.address}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#00c400] focus:ring-2 focus:ring-[#00c400]/20 transition-colors placeholder-gray-400"
+                                    placeholder="Your address (optional)"
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="payment_method" className="block text-gray-700 font-medium mb-2">
+                                    Payment Method *
+                                </label>
+                                <select
+                                    id="payment_method"
+                                    name="payment_method"
+                                    required
+                                    value={formData.payment_method}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#00c400] focus:ring-2 focus:ring-[#00c400]/20 transition-colors appearance-none"
+                                >
+                                    {paymentMethods.map((method) => (
+                                        <option key={method} value={method}>
+                                            {method}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -255,7 +289,7 @@ Notes: ${formData.notes}`;
                             <textarea
                                 id="notes"
                                 name="notes"
-                                rows={3}
+                                rows={2}
                                 value={formData.notes}
                                 onChange={handleChange}
                                 className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#00c400] focus:ring-2 focus:ring-[#00c400]/20 transition-colors placeholder-gray-400"
@@ -266,9 +300,10 @@ Notes: ${formData.notes}`;
                         <div className="flex justify-center pt-4">
                             <button
                                 type="submit"
-                                className="bg-gradient-to-r from-[#deff46] to-[#00c400] text-black px-12 py-4 rounded-full font-medium flex items-center gap-2 transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl hover:brightness-105"
+                                disabled={isSubmitting}
+                                className="bg-gradient-to-r from-[#deff46] to-[#00c400] text-black px-12 py-4 rounded-full font-medium flex items-center gap-2 transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl hover:brightness-105 disabled:opacity-70 disabled:cursor-not-allowed"
                             >
-                                Submit your order
+                                {isSubmitting ? 'Submitting...' : 'Submit your order'}
                                 <FaWhatsapp className="w-6 h-6" />
                             </button>
                         </div>
