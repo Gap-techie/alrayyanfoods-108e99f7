@@ -20,7 +20,7 @@ const PreOrderPage = () => {
               className="flex items-center gap-3 text-al-green hover:text-al-green/80 transition-colors w-fit"
             >
               <img
-                src="/lovable-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
+                src="/asset-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
                 alt="Al Rayyan Logo"
                 className="h-12"
               />

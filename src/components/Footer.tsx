@@ -1,6 +1,5 @@
 import React from 'react';
 import { Mail, Phone, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
-import { FaSnapchat, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -15,8 +14,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-6">
               <img
-                src="/lovable-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
-                className="h-16"
+                src="/asset-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
+                alt="Al Rayyan Logo"
+                className="h-16 bg-white rounded-full p-0"
               />
               <h3 className="text-2xl font-playfair font-bold ml-3">Al Rayyan</h3>
             </div>
@@ -35,12 +35,6 @@ const Footer = () => {
               </a>
               <a href="#" className="text-white/80 hover:text-white transition-colors">
                 <Linkedin size={20} />
-              </a>
-              <a href="https://snapchat.com/t/NsiTZsfH" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
-                <FaSnapchat size={20} />
-              </a>
-              <a href="https://wa.me/966575649264" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
-                <FaWhatsapp size={20} />
               </a>
             </div>
           </div>

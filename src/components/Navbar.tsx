@@ -54,7 +54,7 @@ const Navbar = () => {
           className="flex items-center cursor-pointer"
         >
           <img
-            src="/lovable-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
+            src="/asset-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
             alt="Al Rayyan Logo"
             className="h-16"
           />

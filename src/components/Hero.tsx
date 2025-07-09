@@ -15,7 +15,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/lovable-uploads/herosection.mp4" type="video/mp4" />
+          <source src="/asset-uploads/herosection.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Vignette effect */}

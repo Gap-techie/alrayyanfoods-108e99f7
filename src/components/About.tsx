@@ -25,7 +25,7 @@ const About = () => {
           <div className="order-1 md:order-2 h-full">
             <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/6eab4cdc-9b8e-4ade-b086-0a0c1d6a399c.png"
+                src="/asset-uploads/6eab4cdc-9b8e-4ade-b086-0a0c1d6a399c.png"
                 alt="Premium Punjab basmati rice fields - Al Rayyan's source for quality basmati in Saudi Arabia" 
                 className="w-full h-full object-cover rounded-lg transition-transform hover:scale-105 duration-700"
                 style={{ minHeight: '100%' }}

@@ -5,7 +5,7 @@ const productsData = [
     id: 1,
     name: "Royal Basmati",
     description: "12-month aged premium basmati rice from Pakistan, known for its extra-long grains, sweet aroma, and creamy texture. Perfect for  Kabsa, Bukhari, Biryani, Pulao, and festive meals. Enjoy authentic flavor and fluffy, separate grains in every dish.",
-    image: "/lovable-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
+    image: "/asset-uploads/238c4562-6bfc-4c66-8327-f94c7ca7fe7f.png",
     features: [
       "Extra Long Grain",
       "Nutrient-Rich", 
@@ -21,7 +21,7 @@ const productsData = [
     id: 2,
     name: "Golden Basmati",
     description: "Premium aged golden basmati rice from Pakistan, known for its distinct golden hue, floral aroma, and buttery flavor. Enjoy fluffy, separate grains in biryanis, pulao, and special occasions. A true culinary treasure for authentic and aromatic rice dishes",
-    image: "/lovable-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
+    image: "/asset-uploads/d9492563-c3f4-41f0-9e4d-7046c89aa5d9.png",
     features: [
       "Signature Basmati Aroma",  
       "Nutrient-Rich",
