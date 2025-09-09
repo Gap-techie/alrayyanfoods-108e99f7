@@ -13,28 +13,28 @@ const teamMembers = [
     name: "Wahid Wazir",
     title: "Regional Marketing Manager (Saudi Arabia & GCC)",
     tagline: "Driving brand success across the GCC",
-    image: "/images/wahid-wazir.jpg",
+    image: "/lovable-uploads/c8102043-db84-4480-84f2-6900e5437e8c.png",
     description: "Leads marketing campaigns across the GCC, manages distributor and retailer relationships, and drives regional branding and promotions."
   },
   {
     name: "Sibghat Wazir",
     title: "Supply Chain & Procurement Coordinator",
     tagline: "Ensuring seamless supply and quality",
-    image: "/images/sibghat-wazir.jpg",
+    image: "/lovable-uploads/1970c4ca-e66e-4592-b20e-60e3fbb30fe7.png",
     description: "Sources rice from suppliers, ensures quality checks, negotiates contracts, and oversees logistics for export readiness."
   },
   {
     name: "Zahid Ghafoori",
     title: "Business Development & Trade Relations Officer",
     tagline: "Building partnerships for global reach",
-    image: "/images/zahid-ghafoori.jpg",
+    image: "/lovable-uploads/35440999-7380-47f8-b852-a0ba67154437.png",
     description: "Builds customer and investor relationships, develops new business opportunities, and represents the company at trade fairs and industry events."
   },
   {
     name: "Dost Mohammed",
     title: "Export & Operations Coordinator",
     tagline: "Bridging supply with international markets",
-    image: "/images/dost-mohammed.jpg",
+    image: "/lovable-uploads/2120f566-0e5c-4053-8971-43b190717feb.png",
     description: "Manages export documentation, shipping coordination, and supports both supply chain operations and customer communication."
   }
 ];
