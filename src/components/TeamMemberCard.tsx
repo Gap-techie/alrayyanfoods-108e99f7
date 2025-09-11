@@ -19,7 +19,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
           <img
             src={member.image}
             alt={`${member.name} - ${member.title}`}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
             onError={(e) => {
               e.currentTarget.src = '/images/placeholder-team.jpg';
             }}
