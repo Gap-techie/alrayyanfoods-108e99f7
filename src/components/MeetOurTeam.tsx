@@ -20,21 +20,21 @@ const teamMembers = [
     name: "Sibghat Wazir",
     title: "Supply Chain & Procurement Coordinator",
     tagline: "Ensuring seamless supply and quality",
-    image: "/lovable-uploads/1970c4ca-e66e-4592-b20e-60e3fbb30fe7.png",
+    image: "/lovable-uploads/b867c57c-e3e2-4533-ab7c-5bd3104b6dba.png",
     description: "Sources rice from suppliers, ensures quality checks, negotiates contracts, and oversees logistics for export readiness."
   },
   {
     name: "Zahid Ghafoori",
     title: "Business Development & Trade Relations Officer",
     tagline: "Building partnerships for global reach",
-    image: "/lovable-uploads/35440999-7380-47f8-b852-a0ba67154437.png",
+    image: "/lovable-uploads/c6a4b64b-0154-4d89-bdca-24357ab242f5.png",
     description: "Builds customer and investor relationships, develops new business opportunities, and represents the company at trade fairs and industry events."
   },
   {
     name: "Dost Mohammed",
     title: "Export & Operations Coordinator",
     tagline: "Bridging supply with international markets",
-    image: "/lovable-uploads/2120f566-0e5c-4053-8971-43b190717feb.png",
+    image: "/lovable-uploads/33d1739e-39f3-45f7-99cd-aeab4bef72d3.png",
     description: "Manages export documentation, shipping coordination, and supports both supply chain operations and customer communication."
   }
 ];
