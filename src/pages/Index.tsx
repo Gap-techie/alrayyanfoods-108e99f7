@@ -5,6 +5,7 @@ import About from '../components/About';
 import Products from '../components/Products';
 import WhyChooseUs from '../components/WhyChooseUs';
 import MeetOurTeam from '../components/MeetOurTeam';
+import InvestorRelations from '../components/InvestorRelations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
@@ -24,6 +25,7 @@ const Index = () => {
           <Products />
           <WhyChooseUs />
           <MeetOurTeam />
+          <InvestorRelations />
           <Contact />
         </main>
         
