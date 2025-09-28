@@ -6,14 +6,14 @@ const teamMembers = [
     name: "Obaid",
     title: "Chief Executive Officer (CEO) & Founder",
     tagline: "Visionary leader shaping global growth",
-    image: "/images/peter-ceo.jpg", 
+    image: "/lovable-uploads/obaid-ceo.png", 
     description: "Defines the vision and long-term strategy, builds investor and partner relations, and oversees company expansion in Saudi Arabia and international markets."
   },
   {
     name: "Wahid Wazir",
     title: "Regional Marketing Manager (Saudi Arabia & GCC)",
     tagline: "Driving brand success across the GCC",
-    image: "/lovable-uploads/c8102043-db84-4480-84f2-6900e5437e8c.png",
+    image: "/lovable-uploads/wahid-wazir-new.png",
     description: "Leads marketing campaigns across the GCC, manages distributor and retailer relationships, and drives regional branding and promotions."
   },
   {
