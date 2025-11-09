@@ -1,5 +1,4 @@
-import React from 'react';
-import TeamMemberCard from './TeamMemberCard';
+import React, { useState } from 'react';
 
 const teamMembers = [
   {
@@ -39,12 +38,49 @@ const teamMembers = [
   }
 ];
 
+const TeamCard = ({ member }) => {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      className={`relative rounded-2xl shadow-lg overflow-hidden flex flex-col items-center transition-all duration-300 group cursor-pointer
+        ${hovered ? 'bg-gradient-to-br from-[#414d36] via-[#3a3f2d] to-[#232526]' : 'bg-white'}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      tabIndex={0}
+      onFocus={() => setHovered(true)}
+      onBlur={() => setHovered(false)}
+    >
+      <div className="w-full flex justify-center items-center bg-black rounded-t-2xl" style={{ minHeight: '400px' }}>
+        <img
+          src={member.image}
+          alt={member.name}
+          className="max-h-[400px] w-auto object-contain rounded-t-2xl"
+          style={{ display: 'block', margin: '0 auto', maxWidth: '100%' }}
+        />
+      </div>
+      <div className="w-full px-6 py-4 flex flex-col items-center">
+        <h3 className="text-lg md:text-xl font-playfair font-bold text-al-green mb-1 text-center">{member.name}</h3>
+        <p className="text-sm md:text-base text-al-gold font-semibold text-center mb-0">{member.title}</p>
+      </div>
+      {/* Hover/Focus Reveal */}
+      <div
+        className={`absolute left-0 right-0 bottom-0 px-6 py-4 rounded-b-2xl shadow-lg transition-all duration-300 ease-in-out
+          ${hovered ? 'opacity-100 translate-y-0 pointer-events-auto bg-gradient-to-br from-[#414d36] via-[#3a3f2d] to-[#232526]' : 'opacity-0 translate-y-8 pointer-events-none bg-white'}
+        `}
+        style={{ zIndex: 10 }}
+      >
+        <p className="italic text-al-gold text-sm mb-2">{`"${member.tagline}"`}</p>
+        <p className="text-gray-100 text-xs md:text-sm leading-relaxed">{member.description}</p>
+      </div>
+    </div>
+  );
+};
+
 const MeetOurTeam = () => {
   return (
     <section id="team" className="section-padding bg-al-cream-light relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute top-0 left-0 w-full h-64 bg-arabesque opacity-5"></div>
-      
       <div className="container-custom relative">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -56,43 +92,20 @@ const MeetOurTeam = () => {
             The dedicated professionals behind Al Rayyan's commitment to delivering premium Pakistani basmati rice to Saudi Arabia and beyond.
           </p>
         </div>
-
         {/* Team Grid - Responsive Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <TeamMemberCard member={member} />
-            </div>
+            <TeamCard key={index} member={member} />
           ))}
         </div>
-
         {/* Team Stats or Call to Action */}
-        <div className="mt-16 glass-panel p-8 rounded-xl text-center">
-          <h3 className="text-xl md:text-2xl font-playfair font-bold text-al-green mb-4">
-            Excellence Through Teamwork
-          </h3>
-          <p className="text-gray-700 mb-6 max-w-3xl mx-auto">
-            Our diverse team combines decades of experience in agriculture, international trade, marketing, and logistics 
-            to ensure every grain of Al Rayyan basmati meets the highest standards of quality and freshness.
+        <div
+          className="mt-16 bg-gradient-to-r from-[#4a4a38] via-[#3d3d2f] to-[#2d2d1f] backdrop-blur-md border border-white/20 p-8 text-center rounded-xl flex flex-col items-center justify-center w-full mx-auto md:p-16"
+        >
+          <h3 className="text-xl md:text-3xl font-playfair font-bold text-white mb-4">Excellence Through Teamwork</h3>
+          <p className="text-gray-300 mb-2 max-w-3xl mx-auto text-base md:text-lg font-normal leading-relaxed">
+            Our diverse team combines decades of experience in agriculture, international trade, marketing, and logistics. We work collaboratively to ensure every grain of Al Rayyan basmati meets the highest standards of quality and freshness. Our commitment to excellence drives us to deliver premium products and outstanding service to our customers and partners worldwide.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-al-gold mb-2">20+</div>
-              <div className="text-sm text-gray-600">Countries Served</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-al-gold mb-2">15+</div>
-              <div className="text-sm text-gray-600">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-al-gold mb-2">100%</div>
-              <div className="text-sm text-gray-600">Customer Satisfaction</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
