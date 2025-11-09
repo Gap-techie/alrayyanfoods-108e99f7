@@ -64,10 +64,10 @@ export default {
 				},
 				// Custom colors for Al Rayyan
 				'al-green': {
-					DEFAULT: '#2A593E',
-					light: '#3B7A59',
-					dark: '#1E3F2C',
-					faded: 'rgba(42, 89, 62, 0.1)',
+					DEFAULT: '#3a8052',
+					light: '#4a9a68',
+					dark: '#2a5a3e',
+					faded: '#e8f5ed',
 				},
 				'al-live-green': {
 					DEFAULT: '#05a900',

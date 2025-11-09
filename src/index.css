@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 146 36% 30%;
+    --primary: 146 55% 38%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 43 68% 52%;
@@ -53,6 +53,9 @@
   body {
     @apply bg-al-cream text-foreground font-poppins;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232a593e' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -70,19 +73,22 @@
   }
   
   .btn-primary {
-    @apply bg-al-green text-white px-6 py-3 rounded-md font-medium hover:bg-al-green-light transition-colors duration-300;
+    @apply bg-al-green text-white px-6 py-3 rounded-lg font-medium hover:bg-al-green-light transition-all duration-300 active:scale-95 touch-manipulation;
+    min-height: 44px;
   }
   
   .btn-secondary {
-    @apply bg-al-gold text-al-green-dark px-6 py-3 rounded-md font-medium hover:bg-al-gold-light transition-colors duration-300;
+    @apply bg-al-gold text-al-green-dark px-6 py-3 rounded-lg font-medium hover:bg-al-gold-light transition-all duration-300 active:scale-95 touch-manipulation;
+    min-height: 44px;
   }
   
   .btn-outline {
-    @apply border-2 border-al-green text-al-green px-6 py-[10px] rounded-md font-medium hover:bg-al-green hover:text-white transition-colors duration-300;
+    @apply border-2 border-al-green text-al-green px-6 py-[10px] rounded-lg font-medium hover:bg-al-green hover:text-white transition-all duration-300 active:scale-95 touch-manipulation;
+    min-height: 44px;
   }
   
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-16 lg:py-24;
   }
   
   .container-custom {

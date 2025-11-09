@@ -39,11 +39,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-gradient-to-b from-gray-900 via-gray-800 to-black">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="section-title">Contact & Export Inquiries</h2>
-          <p className="section-subtitle">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Contact & Export Inquiries</h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Interested in our products? We export worldwide and offer flexible
             options for businesses of all sizes.
           </p>
@@ -51,21 +51,21 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <div className="glass-card p-8 rounded-xl">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-xl">
             {formSubmitted ? (
               <div className="text-center py-8">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
                   <Check className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-playfair font-bold text-al-green mb-2">Thank You!</h3>
-                <p className="text-gray-600">
+                <h3 className="text-2xl font-playfair font-bold text-white mb-2">Thank You!</h3>
+                <p className="text-gray-300">
                   Your message has been received. Our team will get back to you shortly.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                     Your Name *
                   </label>
                   <input
@@ -75,11 +75,11 @@ const Contact = () => {
                     required
                     value={formState.name}
                     onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-al-green"
+                    className="w-full p-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-al-gold placeholder-gray-400"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
                     Email Address *
                   </label>
                   <input
@@ -89,11 +89,11 @@ const Contact = () => {
                     required
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-al-green"
+                    className="w-full p-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-al-gold placeholder-gray-400"
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">
                     Company Name
                   </label>
                   <input
@@ -102,11 +102,11 @@ const Contact = () => {
                     name="company"
                     value={formState.company}
                     onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-al-green"
+                    className="w-full p-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-al-gold placeholder-gray-400"
                   />
                 </div>
                 <div>
-                  <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-300 mb-1">
                     Inquiry Type
                   </label>
                   <select
@@ -114,17 +114,17 @@ const Contact = () => {
                     name="inquiryType"
                     value={formState.inquiryType}
                     onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-al-green"
+                    className="w-full p-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-al-gold"
                   >
-                    <option value="general">General Inquiry</option>
-                    <option value="wholesale">Wholesale Order</option>
-                    <option value="distribution">Distribution Partnership</option>
-                    <option value="bulk">Bulk Purchase</option>
-                    <option value="other">Other</option>
+                    <option value="general" className="bg-gray-800">General Inquiry</option>
+                    <option value="wholesale" className="bg-gray-800">Wholesale Order</option>
+                    <option value="distribution" className="bg-gray-800">Distribution Partnership</option>
+                    <option value="bulk" className="bg-gray-800">Bulk Purchase</option>
+                    <option value="other" className="bg-gray-800">Other</option>
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
                     Your Message *
                   </label>
                   <textarea
@@ -134,10 +134,10 @@ const Contact = () => {
                     required
                     value={formState.message}
                     onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-al-green"
+                    className="w-full p-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-al-gold placeholder-gray-400"
                   ></textarea>
                 </div>
-                <button type="submit" className="btn-primary w-full">
+                <button type="submit" className="w-full bg-al-gold hover:bg-al-gold-light text-gray-900 font-medium py-3 rounded-lg transition-all duration-300 active:scale-95 min-h-[44px]">
                   Send Message
                 </button>
               </form>
@@ -146,12 +146,12 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-xl font-playfair font-bold text-al-green mb-4">Our Office</h3>
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl">
+              <h3 className="text-xl font-playfair font-bold text-white mb-4">Our Office</h3>
               <div className="flex items-start space-x-4">
                 <MapPin className="w-5 h-5 text-al-gold mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-700">
+                  <p className="text-gray-300">
                     <b>Al Rayyan Food imports</b> <br />
                     Old Yanbu Road, Old Industrial<br />
                     Madinah Al-Munawarah<br />
@@ -161,27 +161,27 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-xl font-playfair font-bold text-al-green mb-4">Contact Information</h3>
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl">
+              <h3 className="text-xl font-playfair font-bold text-white mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <Mail className="w-5 h-5 text-al-gold flex-shrink-0" />
-                  <a href="mailto:info@alrayyanrice.com" className="text-gray-700 hover:text-al-green">
+                  <a href="mailto:info@alrayyanrice.com" className="text-gray-300 hover:text-al-gold">
                     info@alrayyanfoods.co
                   </a>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="w-5 h-5 text-al-gold flex-shrink-0" />
-                  <a href="tel:+966575649264" className="text-gray-700 hover:text-al-green">
+                  <a href="tel:+966575649264" className="text-gray-300 hover:text-al-gold">
                     +966 575 649 264
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-xl font-playfair font-bold text-al-green mb-4">Export Information</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl">
+              <h3 className="text-xl font-playfair font-bold text-white mb-4">Export Information</h3>
+              <p className="text-gray-300 mb-4">
                 We pride ourselves on our efficient international shipping process, with export capabilities worldwide.
               </p>
               <ul className="space-y-2">
@@ -193,7 +193,7 @@ const Contact = () => {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <Check className="w-5 h-5 text-al-gold mr-2 flex-shrink-0 mt-1" />
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-300">{item}</span>
                   </li>
                 ))}
               </ul>
