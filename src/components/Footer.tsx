@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-al-green text-white pt-16 pb-8">
+    <footer className="bg-gradient-to-b from-[#4a4a38] via-[#3d3d2f] to-[#2d2d1f] text-white pt-16 pb-8">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}

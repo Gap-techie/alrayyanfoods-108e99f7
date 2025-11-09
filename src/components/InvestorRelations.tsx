@@ -145,7 +145,7 @@ const InvestorRelations = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-al-gold/20 to-al-green/20 backdrop-blur-md border border-white/20 p-8 text-center rounded-xl">
+        <div className="bg-gradient-to-r from-[#4a4a38] via-[#3d3d2f] to-[#2d2d1f] backdrop-blur-md border border-white/20 p-8 text-center rounded-xl">
           <h3 className="text-2xl font-playfair font-bold text-white mb-4">Partner With Al Rayyan</h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             We're seeking strategic investors and partners who share our vision of building a premium food brand that connects authentic Pakistani heritage with the modern Saudi market.
