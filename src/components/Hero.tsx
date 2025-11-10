@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20">
+  <section id="hero" className="relative min-h-screen flex items-center pt-16 pb-8 sm:pb-16">
       {/* Video background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -24,15 +24,14 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10">
-        <div className="max-w-xl">
+      <div className="container-custom relative z-10 px-2 sm:px-4">
+        <div className="max-w-xl mx-auto md:mx-0 md:ml-0">
           <div className="mb-8 animate-fade-in-right">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-playfair leading-tight">
-            Premium Authentic Pakistani Basmati Rice - Direct from Punjab
-            {/* Authentic Pakistani Basmati Rice */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-playfair leading-tight rounded-xl shadow-sm px-2 py-1 bg-black/30">
+              Premium Authentic Pakistani Basmati Rice - Direct from Punjab
             </h1>
-            <p className="text-lg md:text-sm text-white/90 mb-8">
-               Experience the finest quality, traditionally grown, aromatic long-grain basmati rice from the fertile plains of Punjab, Pakistan. Our premium basmati rice delivers exceptional taste, perfect texture, and authentic aroma for your Kabsa, Bukhari, biryani, pulao, and special dishes in Saudi Arabia.
+            <p className="text-base sm:text-lg text-white/90 mb-8 rounded-lg bg-black/20 px-2 py-2">
+              Experience the finest quality, traditionally grown, aromatic long-grain basmati rice from the fertile plains of Punjab, Pakistan. Our premium basmati rice delivers exceptional taste, perfect texture, and authentic aroma for your Kabsa, Bukhari, biryani, pulao, and special dishes in Saudi Arabia.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Explore Our Rice Button */}
@@ -41,10 +40,10 @@ const Hero = () => {
                 smooth={true}
                 duration={500}
                 offset={-70}
-                className="bg-al-gold hover:bg-al-gold-light text-al-green-dark font-medium text-base px-6 py-2.5 h-auto flex items-center justify-center sm:justify-start gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105 w-full sm:w-auto"
+                className="bg-al-gold hover:bg-al-gold-light text-al-green-dark font-semibold text-base px-6 py-3 h-auto flex items-center justify-center sm:justify-start gap-2 rounded-full shadow-lg transition-transform transform hover:scale-105 w-full sm:w-auto"
               >
                 Explore Our Rice
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-5 w-5" />
               </ScrollLink>
 
               {/* Get a Quote Button */}
@@ -53,10 +52,10 @@ const Hero = () => {
                 smooth={true}
                 duration={500}
                 offset={-70}
-                className="border-2 border-white text-white hover:bg-white hover:text-al-green font-medium text-base px-6 py-2.5 h-auto flex items-center justify-center sm:justify-start gap-2 rounded-lg shadow-lg transition-transform transform hover:scale-105 w-full sm:w-auto"
+                className="border-2 border-white text-white hover:bg-white hover:text-al-green font-semibold text-base px-6 py-3 h-auto flex items-center justify-center sm:justify-start gap-2 rounded-full shadow-lg transition-transform transform hover:scale-105 w-full sm:w-auto"
               >
                 Get a Quote
-                <Mail className="h-4 w-4" />
+                <Mail className="h-5 w-5" />
               </ScrollLink>
             </div>
           </div>

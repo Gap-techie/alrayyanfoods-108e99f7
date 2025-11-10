@@ -54,7 +54,7 @@ const FeatureCard = ({ feature }: { feature: typeof features[0] }) => {
 
 const WhyChooseUs = () => {
 			return (
-				<section id="why-us" className="section-padding bg-gradient-to-br from-[#f7e08c] via-[#e6d98a] to-[#b2e2c9] relative overflow-hidden">
+				<section id="why-us" className="section-padding bg-gradient-to-br from-[#f5f3e8] via-[#e8ebe0] to-[#dde3d5] relative overflow-hidden pb-8">
 					{/* Arabic Dot Pattern */}
 					<div className="absolute inset-0 pointer-events-none z-0">
 						<svg width="100%" height="100%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
 							<circle cx="1100" cy="80" r="2.5" fill="#c2b280" opacity="0.18" />
 						</svg>
 					</div>
-					<div className="container-custom relative z-10">
+					<div className="container-custom relative z-10 px-2 sm:px-4">
 				<div className="text-center mb-16">
 					<h2 className="section-title">Why Choose Al Rayyan</h2>
 					<p className="section-subtitle">
@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
 					</p>
 				</div>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 					{features.map((feature, index) => (
 						<FeatureCard key={index} feature={feature} />
 					))}

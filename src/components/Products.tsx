@@ -37,17 +37,17 @@ const productsData = [
 
 const ProductCard = ({ product }: { product: typeof productsData[0] }) => {
   return (
-    <div className="glass-card p-6 group h-full flex flex-col">
-      <div className="relative mb-6 overflow-hidden rounded-lg">
+    <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 group h-full flex flex-col transition-all duration-300 hover:scale-[1.03] hover:shadow-xl mb-6 sm:mb-0">
+      <div className="relative mb-6 overflow-hidden rounded-xl flex items-center justify-center bg-al-cream-light" style={{ minHeight: '220px' }}>
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-80 object-contain group-hover:scale-105 transition-transform duration-500"
+          className="w-auto h-40 sm:h-56 object-contain group-hover:scale-105 transition-transform duration-500"
         />
       </div>
-      <h3 className="text-xl font-playfair font-bold text-al-green mb-2">{product.name}</h3>
-      <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
-      <div className="flex flex-wrap gap-2 mt-auto">
+      <h3 className="text-lg sm:text-xl font-playfair font-bold text-al-green mb-2 text-center">{product.name}</h3>
+      <p className="text-gray-700 mb-4 flex-grow text-center text-sm sm:text-base">{product.description}</p>
+      <div className="flex flex-wrap gap-2 mt-auto justify-center">
         {product.features.map((feature, index) => (
           <span
             key={index}
@@ -63,16 +63,16 @@ const ProductCard = ({ product }: { product: typeof productsData[0] }) => {
 
 const Products = () => {
   return (
-    <section id="products" className="section-padding bg-gradient-to-b from-al-cream to-white">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="section-title">Our Products</h2>
-          <p className="section-subtitle">
+  <section id="products" className="section-padding bg-gradient-to-br from-[#fef5e7] via-[#fff9e6] to-[#f5f3e8] pb-8">
+      <div className="container-custom px-2 sm:px-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="section-title text-2xl sm:text-3xl font-bold font-playfair mb-2">Our Products</h2>
+          <p className="section-subtitle text-base sm:text-lg text-gray-700">
             Discover our premium selection of authentic Pakistani basmati rice
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 justify-center">
           {productsData.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

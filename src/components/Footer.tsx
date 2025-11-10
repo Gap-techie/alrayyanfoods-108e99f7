@@ -8,39 +8,39 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-[#4a4a38] via-[#3d3d2f] to-[#2d2d1f] text-white pt-16 pb-8">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-gradient-to-b from-[#4a4a38] via-[#3d3d2f] to-[#2d2d1f] text-white pt-10 pb-6 rounded-t-2xl shadow-2xl">
+      <div className="container-custom px-2 sm:px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-6">
               <img
                 src="/lovable-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
-                className="h-16"
+                className="h-12 sm:h-16 rounded-xl shadow-md"
               />
-              <h3 className="text-2xl font-playfair font-bold ml-3">Al Rayyan</h3>
+              <h3 className="text-xl sm:text-2xl font-playfair font-bold ml-3">Al Rayyan</h3>
             </div>
             <p className="text-white/80 mb-6">
               Premium Pakistani Basmati Rice exporters, delivering quality and tradition to your table.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                <Facebook size={20} />
+            <div className="flex space-x-3 sm:space-x-4">
+              <a href="#" className="text-white/80 hover:text-white transition-colors rounded-full p-2">
+                <Facebook size={22} />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                <Instagram size={20} />
+              <a href="#" className="text-white/80 hover:text-white transition-colors rounded-full p-2">
+                <Instagram size={22} />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                <Twitter size={20} />
+              <a href="#" className="text-white/80 hover:text-white transition-colors rounded-full p-2">
+                <Twitter size={22} />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                <Linkedin size={20} />
+              <a href="#" className="text-white/80 hover:text-white transition-colors rounded-full p-2">
+                <Linkedin size={22} />
               </a>
-              <a href="https://snapchat.com/t/NsiTZsfH" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
-                <FaSnapchat size={20} />
+              <a href="https://snapchat.com/t/NsiTZsfH" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors rounded-full p-2">
+                <FaSnapchat size={22} />
               </a>
-              <a href="https://wa.me/966575649264" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
-                <FaWhatsapp size={20} />
+              <a href="https://wa.me/966575649264" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors rounded-full p-2">
+                <FaWhatsapp size={22} />
               </a>
             </div>
           </div>

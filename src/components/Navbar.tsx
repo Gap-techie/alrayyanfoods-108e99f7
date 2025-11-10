@@ -26,8 +26,7 @@ const Navbar = () => {
     before:bg-gradient-to-r before:from-[#d3b036] before:to-[#00c400] before:to-[#2a593e]
     before:-z-10
     isolate
-    ${isScrolled ? 'text-white' : 'text-white'}
-    font-medium px-6 py-2.5 rounded-full
+    font-semibold px-6 py-3 rounded-full
     shadow-lg hover:shadow-xl
     transform hover:scale-105 transition-all duration-300
     flex items-center gap-2
@@ -35,17 +34,18 @@ const Navbar = () => {
     after:bg-gradient-to-r after:from-[#d3b036] after:via-[#00c400] after:to-[#2a593e]
     after:-z-10 after:opacity-0 hover:after:opacity-100
     after:transition-opacity
+    text-white
   `;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-lg shadow-md py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/90 backdrop-blur-lg shadow-md py-2 rounded-b-2xl"
+          : "bg-transparent py-4 rounded-b-2xl"
       }`}
     >
-      <div className="container-custom flex items-center justify-between">
+      <div className="container-custom flex items-center justify-between px-2 sm:px-4">
         <ScrollLink
           to="hero"
           smooth={true}
@@ -56,10 +56,10 @@ const Navbar = () => {
           <img
             src="/lovable-uploads/f95e44aa-4efe-49d8-ae69-72a5f89ee327.png"
             alt="Al Rayyan Logo"
-            className="h-16"
+            className="h-12 sm:h-16 rounded-xl shadow-md"
           />
           <div className="ml-2">
-            <h1 className={`text-xl font-playfair font-bold transition-colors duration-300 ${
+            <h1 className={`text-lg sm:text-xl font-playfair font-bold transition-colors duration-300 ${
               isScrolled ? "text-al-green" : "text-white"
             }`}>
               Al Rayyan
