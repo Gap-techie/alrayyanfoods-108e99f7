@@ -78,7 +78,7 @@ const TeamCard = ({ member }) => {
 
 const MeetOurTeam = () => {
   return (
-  <section id="team" className="section-padding bg-gradient-to-br from-[#e6f2d8] via-[#d2e6c7] to-[#b2e2c9] relative overflow-hidden pb-8">
+  <section id="team" className="section-padding bg-gradient-to-br from-[#f0fdf4] via-[#f7fee7] to-[#fefce8] relative overflow-hidden pb-8">
       {/* Background Pattern */}
       <div className="absolute top-0 left-0 w-full h-64 bg-arabesque opacity-5"></div>
   <div className="container-custom relative px-2 sm:px-4">

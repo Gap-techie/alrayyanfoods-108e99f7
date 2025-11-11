@@ -54,7 +54,7 @@ const FeatureCard = ({ feature }: { feature: typeof features[0] }) => {
 
 const WhyChooseUs = () => {
 			return (
-				<section id="why-us" className="section-padding bg-gradient-to-br from-[#f5f3e8] via-[#e8ebe0] to-[#dde3d5] relative overflow-hidden pb-8">
+				<section id="why-us" className="section-padding bg-gradient-to-br from-[#f0fdf4] via-[#f7fee7] to-[#fefce8] relative overflow-hidden pb-8">
 					{/* Arabic Dot Pattern */}
 					<div className="absolute inset-0 pointer-events-none z-0">
 						<svg width="100%" height="100%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
