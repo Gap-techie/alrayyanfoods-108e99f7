@@ -9,28 +9,28 @@ const teamMembers = [
     description: "Defines the vision and long-term strategy, builds investor and partner relations, and oversees company expansion in Saudi Arabia and international markets."
   },
   {
-    name: "WAHID WAZIR",
-    title: "Regional Marketing Manager (Saudi Arabia & GCC)",
+    name: "ABDUL WAHID WAZIR",
+    title: "Regional Marketing Manager (KSA)",
     tagline: "Driving brand success across the GCC",
     image: "/lovable-uploads/wahid-wazir-new.png",
     description: "Leads marketing campaigns across the GCC, manages distributor and retailer relationships, and drives regional branding and promotions."
   },
   {
-    name: "SIBGHAT WAZIR",
+    name: "SIBGHATULLAH WAZIR",
     title: "Supply Chain & Procurement Coordinator",
     tagline: "Ensuring seamless supply and quality",
     image: "/lovable-uploads/b867c57c-e3e2-4533-ab7c-5bd3104b6dba.png",
     description: "Sources rice from suppliers, ensures quality checks, negotiates contracts, and oversees logistics for export readiness."
   },
   {
-    name: "ZAHID GHAFOORI",
+    name: "ABDULLAH GHAFOORI ZAHID",
     title: "Business Development & Trade Relations Officer",
     tagline: "Building partnerships for global reach",
     image: "/lovable-uploads/c6a4b64b-0154-4d89-bdca-24357ab242f5.png",
     description: "Builds customer and investor relationships, develops new business opportunities, and represents the company at trade fairs and industry events."
   },
   {
-    name: "DOST MOHAMMED",
+    name: "DOST MUHAMMAD KHAN WAZIR",
     title: "Export & Operations Coordinator",
     tagline: "Bridging supply with international markets",
     image: "/lovable-uploads/33d1739e-39f3-45f7-99cd-aeab4bef72d3.png",
